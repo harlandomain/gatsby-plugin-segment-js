@@ -40,7 +40,7 @@ plugins: [
       // to include analytics.page() automatically
       // if false, see below on how to track pageviews manually
       trackPage: false,
-      
+
       // If you need to proxy events through a custom endpoint,
       // add a `host` property (defaults to https://cdn.segment.io)
       // Segment docs:
@@ -66,7 +66,13 @@ plugins: [
 
       // number (default to 1000); time to wait after scroll or route change
       // To be used when `delayLoad` is set to `true`
-      delayLoadTime: 1000
+      delayLoadTime: 1000,
+
+      // boolean (defaults to false) on whether you want
+      // to load all analytics automatically
+      // if true, window.analytics.load(writeKey) will need to be called in app
+      // used for halting cookies from analytics until a web visitor accepts cookies
+      loadOnRender: true
     }
   }
 ];
